@@ -1,0 +1,76 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <title> котик для Вики</title> 
+  <style type="text/css"> 
+    body{ 
+    background: rgb(9, 105, 160); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+    height: 100vh; 
+    box-sizing: border-box; 
+} 
+.flex{ 
+    display: flex; 
+    justify-content: center; 
+} 
+h2{ 
+    color: rgb(14, 202, 7); 
+    letter-spacing: 1px; 
+} 
+.btn{ 
+    position: relative; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    width: 50px; 
+    font-weight: bold; 
+    height: 40px; 
+    transition: 0.08s; 
+    border: none; 
+    background: rgb(14, 202, 7); 
+    border-radius: 10px; 
+    cursor: pointer; 
+    margin: 40px 5px; 
+} 
+  </style> 
+</head> 
+<body> 
+<div class="flex"> 
+    <h2 class="opros">ты гей? ?)</h2> 
+  </div> 
+  <div class="flex"> 
+    <div class="board"> 
+      <button id="btn1" class="btn">Да</button> 
+      <button id="btn" class="btn">Нет</button> 
+    </div> 
+  </div> 
+  <script type="text/javascript"> 
+    let btn1 = document.querySelector('#btn1'); 
+    let opros = document.querySelector('.opros'); 
+ 
+    const random = (min, max) => { 
+    const rand = min + Math.random() * (max - min + 1); 
+    return Math.floor(rand); 
+} 
+ 
+const btn = document.querySelector('#btn'); 
+btn.addEventListener ('mouseenter', () => { 
+
+ btn.style.top = Math.floor(Math.random()*250+5)+'%';
+ btn.style.left = Math.floor(Math.random()*250+5)+'%';
+}); 
+ 
+ btn.addEventListener('click', function(){ 
+ opros.textContent = 'Натурал значит, понял  ' 
+}) 
+ 
+btn1.addEventListener('click', function(){ 
+ opros.textContent = 'Всегда знал что ты на голубой стороне ' 
+}) 
+  </script> 
+</body> 
+</html>
